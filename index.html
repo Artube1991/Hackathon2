@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" async defer></script>
+    <title>Hackathon#2: Anxiety Test by Alex Ivanoff</title>
+</head>
+<body>
+    <form id="greeting" class="regForm" onsubmit="submitForm(event)">
+    <div class="tab">
+    
+      
+      <!-- One "tab" for each step in the form: -->
+      
+        <h1>Hello!</h1>
+        <p>The reality around us has recently become so disturbing and unpleasant that the emergence of an innovative test to identify the level of anxiety has become a vital necessity. So, this is the Anxiety Test.</p>
+        <p>It offers you 12 different questions that let us to accurately and dispassionately determine how anxious you are at this moment.</p>
+        <p>But that's not all! After carefully processing the test results, we will not only provide you with a conclusion about your stress, but also give you some practical recommendations and tips for dealing with anxiety.</p>
+        <p>If you're not scared, then let's get started! So,</p>
+        <p><input placeholder="What is your name?" name="name"></p>
+    </div>
+    <div class="tab">
+        <h2>"I feel confident". How much can this phrase be relevant for you?</h2>
+        <input type="radio" id="confidence_0" name="confidence" value="0">
+        <label for="confidence_0">0 (nothing at all)</label><br>
+        <input type="radio" id="confidence_1" name="confidence" value="1">
+        <label for="confidence_1">1</label><br>
+        <input type="radio" id="confidence_2" name="confidence" value="2">
+        <label for="confidence_2">2</label><br>
+        <input type="radio" id="confidence_3" name="confidence" value="3">
+        <label for="confidence_3">3</label><br>
+        <input type="radio" id="confidence_4" name="confidence" value="4">
+        <label for="confidence_4">4</label><br>
+        <input type="radio" id="confidence_5" name="confidence" value="5">
+        <label for="confidence_5">5 (probably)</label><br>
+        <input type="radio" id="confidence_6" name="confidence" value="6">
+        <label for="confidence_6">6</label><br>
+        <input type="radio" id="confidence_7" name="confidence" value="7">
+        <label for="confidence_7">7</label><br>
+        <input type="radio" id="confidence_8" name="confidence" value="8">
+        <label for="confidence_8">8</label><br>
+        <input type="radio" id="confidence_9" name="confidence" value="9">
+        <label for="confidence_9">9</label><br>
+        <input type="radio" id="confidence_10" name="confidence" value="10">
+        <label for="confidence_10">10 (definetely)</label><br>
+      </div>
+      <div class="tab">
+        <h2>Which of these words most accurately describe you?</h2>
+        <input type="checkbox" id="describe1" name="describe1" value="glad">
+        <label for="describe1"> I'm glad</label><br>
+        <input type="checkbox" id="describe2" name="describe2" value="rested">
+        <label for="describe2"> I feel rested</label><br>
+        <input type="checkbox" id="describe3" name="describe3" value="balanced">
+        <label for="describe3"> I'm balanced</label><br>
+        <input type="checkbox" id="describe4" name="describe4" value="cheerful">
+        <label for="describe4"> I'm cheerful</label><br>
+        <input type="checkbox" id="describe5" name="describe5" value="feel_free">
+        <label for="describe5"> I feel free</label><br>
+      </div>
+      <div class="tab">
+        <h2>Choose a picture below.</h2>
+        <img src="./images/01.jpg"></img>
+        <input type="radio" id="pict_1" name="pict_1" value="1">
+        <label for="pict_1">1</label><br>
+        <img src="./images/02.jpg"></img>
+        <input type="radio" id="pict_2" name="pict_2" value="2">
+        <label for="pict_2">2</label><br>
+        <img src="./images/03.jpg"></img>
+        <input type="radio" id="pict_3" name="pict_3" value="3">
+        <label for="pict_3">3</label><br>
+        <img src="./images/04.jpg"></img>
+        <input type="radio" id="pict_4" name="pict_4" value="4">
+        <label for="pict_4">4</label><br>
+      </div>
+      <div class="tab">
+        <h2>What things have been bothering you for the last 14 days?</h2>
+        <p><input placeholder="Type here..." name="bothering things"></p>
+      </div>
+      <div class="tab">
+        <h2>What things have been bothering you for the last 14 days?</h2>
+        <p><input placeholder="Type here..." name="bothering things"></p>
+        <p><input type="submit" value="Submit" /></p>
+      </div>
+      <div style="overflow:auto;">
+        <div style="float:right;">
+          <button type="button" class="prev">Previous</button>
+          <button type="button" class="next">Next</button>
+        </div>
+      </div>
+      <!-- Circles which indicates the steps of the form: -->
+      <div style="text-align:center;margin-top:40px;">
+        <span class="step current-step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+      </div>
+    </form>
+    
+    </body>
+    </html>
+    
