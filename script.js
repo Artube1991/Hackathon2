@@ -40,31 +40,23 @@ getGIF("gif-cat", "cat")
 
 function submitForm(e) {
     e.preventDefault();
-    let user_input = e.target.name.value;
-    let user_input_2a = e.target.fav_language.value
-    let user_input_2b = e.target.vehicle1.value
-    let user_input_2c = e.target.vehicle2.value
-    let user_input_2d = e.target.vehicle3.value
-    let user_input_2 = e.target.email.value;
-    let user_input_3 = e.target.phone.value;
-    let user_input_4 = e.target.dd.value;
-    let user_input_5 = e.target.nn.value;
-    let user_input_6 = e.target.yyyy.value;
-    let user_input_7 = e.target.uname.value;
-    let user_input_8 = e.target.pword.value;
+    let user_input = e.target.confidence.value;
+    let user_input_2 = e.target.pict.value;
+    let user_input_3 = e.target.bothering.value;
+    let user_input_4 = e.target.avoid.value;
+    let user_input_5 = e.target.rate.value;
+    let user_input_6 = e.target.pleasure.value;
+    let user_input_7 = e.targer.safe.value;
+    let user_input_8 = e.target.restless.value;
+
     console.log(user_input);
     console.log(user_input_2);
-    console.log(user_input_2a);
-    console.log(user_input_2b);
-    console.log(user_input_2c);
-    console.log(user_input_2d);
     console.log(user_input_3);
     console.log(user_input_4);
     console.log(user_input_5);
     console.log(user_input_6);
     console.log(user_input_7);
     console.log(user_input_8);
-    // greeting.innerHTML = "";
 }
 
 function showTab(n) { // Отвечает за показ текущего таба и показ кнопки "Назад (prev)"
