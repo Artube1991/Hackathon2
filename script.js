@@ -4,7 +4,39 @@ showTab(currentTab);
 const next = document.querySelector('.next'),
       prev = document.querySelector('.prev');
 
-let greeting = document.getElementById("greeting");
+function getRandomInt(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min) + min);
+    }
+
+function toHTML(element, text) {
+      elem_to_insert = document.getElementById(element);
+      elem_to_insert.innerHTML = `<div><iframe src="https://giphy.com/embed/${text}" width="480" height="480" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>`
+  }
+
+function getGIF(element, theme) {
+  fetch(`https://api.giphy.com/v1/gifs/search?q=${theme}&rating=g&api_key=hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My&limit=100`)
+  .then((response) => {
+  if (response.ok){
+      return response.json()
+  } else {
+      throw new Error("Wrong GIF")
+  }
+  })
+  .then((new_obj) => {
+      console.log(new_obj);
+      let number = getRandomInt(1, 51);
+      gif_id = new_obj["data"][number]["id"];
+      toHTML(element, gif_id);
+  })
+  .catch((error) => {
+      console.log(`We have the error: ${error}`)
+      image.innerText = `We have the error: ${error}`
+  });
+};
+
+getGIF("gif-cat", "cat")
 
 function submitForm(e) {
     e.preventDefault();
