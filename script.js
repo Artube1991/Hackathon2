@@ -46,17 +46,20 @@ function submitForm(e) {
     let user_input_4 = e.target.avoid.value;
     let user_input_5 = e.target.rate.value;
     let user_input_6 = e.target.pleasure.value;
-    let user_input_7 = e.targer.safe.value;
+    let user_input_7 = e.target.safe.value;
     let user_input_8 = e.target.restless.value;
 
     console.log(user_input);
     console.log(user_input_2);
-    console.log(user_input_3);
+    console.log(user_input_3_arr.length);
     console.log(user_input_4);
     console.log(user_input_5);
     console.log(user_input_6);
     console.log(user_input_7);
     console.log(user_input_8);
+
+    anxiety_score = user_input + user_input_2 + user_input_3 + user_input_4 + user_input_6 + user_input_7 + user_input_8 - user_input_5;
+    console.log(anxiety_score);
 }
 
 function showTab(n) { // Отвечает за показ текущего таба и показ кнопки "Назад (prev)"
