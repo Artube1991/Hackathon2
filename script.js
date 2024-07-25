@@ -49,12 +49,13 @@ function getGIF(element, theme) {
 
 getGIF("gif-cat", "cat");
 getGIF("no_anxiety_gif", "happy");
+getGIF("low_anxiety_gif", "not bad");
 getGIF("high_anxiety_gif", "anxiety");
 getGIF("anxiety", "sad");
 
 function submitForm(e) {
     e.preventDefault();
-    let user_name = e.taget.name.value;
+    let user_name = e.target.name.value;
     let user_input = Number(e.target.confidence.value);
     let user_input_2 = Number(e.target.pict.value);
     let user_input_3_nan = e.target.bothering.value;
@@ -111,6 +112,9 @@ function showTab(n) {
   x[n].style.display = "block";
   if (n == 0) {
     prev.style.display = "none";
+  }
+  else if (n == x.length - 1) {
+    next.style.display = "none";
   } else {
     prev.style.display = "inline";
   }
@@ -118,7 +122,7 @@ function showTab(n) {
 
 next.addEventListener('click', () => { // Логика кнопки "Вперёд (next)" По нажатию на кнопку проверка полей на валидность и смена текущего таба
   let x = document.querySelectorAll('.tab');
-  if (!validateForm()) { // Проверка полей на валидность
+  if (!validateForm()) {
     return
   }
   if (currentTab <= 11) { // Смена табов
