@@ -51,7 +51,7 @@ getGIF("gif-cat", "cat");
 getGIF("no_anxiety_gif", "happy");
 getGIF("low_anxiety_gif", "not bad");
 getGIF("high_anxiety_gif", "anxiety");
-getGIF("anxiety", "sad");
+getGIF("anxiety_mid_gif", "sad");
 
 function submitForm(e) {
     e.preventDefault();
@@ -94,8 +94,8 @@ function submitForm(e) {
 
     else if (anxiety_score < 22) {
       quetions.style.display = "none";
-      document.getElementById('anxiety').style = "block";
-      document.getElementById('anxiety_text').innerText = `Hi, ${user_name}, we've revealed that your anxiety scores are ${anxiety_score}. You definetely have the anxiety. Try to avoid stresses, eat and sleep well and talk to your friends.`;
+      document.getElementById('anxiety_mid').style = "block";
+      document.getElementById('anxiety_mid_text').innerText = `Hi, ${user_name}, we have revealed that your anxiety scores are ${anxiety_score}. You definetely have the anxiety. Try to avoid stresses, eat and sleep well and talk to your friends.`;
     }
 
     else {

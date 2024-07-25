@@ -23,6 +23,15 @@ body {
   align-self: center;
 }
 
+.finish  {background-color: #ffffff;
+margin: 100px auto;
+font-family: Raleway;
+padding: 40px;
+width: 70%;
+min-width: 300px;
+align-self: center;
+}
+
 h1 {
   text-align: center;  
 }
