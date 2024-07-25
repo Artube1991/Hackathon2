@@ -120,12 +120,12 @@ function showTab(n) {
   }
 }
 
-next.addEventListener('click', () => { // Логика кнопки "Вперёд (next)" По нажатию на кнопку проверка полей на валидность и смена текущего таба
+next.addEventListener('click', () => { 
   let x = document.querySelectorAll('.tab');
   if (!validateForm()) {
     return
   }
-  if (currentTab <= 11) { // Смена табов
+  if (currentTab <= 11) { 
     x[currentTab].style.display = "none";
     currentTab = ++currentTab;
     x[currentTab].style.display = "block";
