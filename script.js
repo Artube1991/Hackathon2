@@ -54,6 +54,7 @@ getGIF("anxiety", "sad");
 
 function submitForm(e) {
     e.preventDefault();
+    let user_name = e.taget.name.value;
     let user_input = Number(e.target.confidence.value);
     let user_input_2 = Number(e.target.pict.value);
     let user_input_3_nan = e.target.bothering.value;
@@ -81,26 +82,30 @@ function submitForm(e) {
     if (anxiety_score < 3) {
       quetions.style.display = "none";
       document.getElementById('no_anxiety').style = "block";
+      document.getElementById('no_anxiety_text').innerText = `You've earned only ${anxiety_score} scores. Your anxiety level is low as low as ever. So, ${user_name}, you may relax and watch the funny video :)`;
     }
 
-    if (3 < anxiety_score < 11) {
+    else if (anxiety_score < 11) {
       quetions.style.display = "none";
       document.getElementById('low_anxiety').style = "block";
+      document.getElementById('low_anxiety_text').innerText = `${user_name}, your anxiety scores are ${anxiety_score}. Your anxiety level is low but you may have some stress deep inside your heart. Listen to it.`;
     }
 
-    if (12 < anxiety_score < 22) {
+    else if (anxiety_score < 22) {
       quetions.style.display = "none";
       document.getElementById('anxiety').style = "block";
+      document.getElementById('anxiety_text').innerText = `Hi, ${user_name}, we've revealed that your anxiety scores are ${anxiety_score}. You definetely have the anxiety. Try to avoid stresses, eat and sleep well and talk to your friends.`;
     }
 
     else {
       quetions.style.display = "none";
+      document.getElementById('high_anxiety_text').innerText = `Your anxiety level is really high! ${anxiety_score} scores! You should talk to psychologist and immediately have a rest! Care of yourself, ${user_name}.`;
       document.getElementById('high_anxiety').style = "block";
     };    
 
 }
 
-function showTab(n) { // Отвечает за показ текущего таба и показ кнопки "Назад (prev)"
+function showTab(n) {
   let x = document.querySelectorAll('.tab');
   const prev = document.querySelector('.prev');
   x[n].style.display = "block";
