@@ -83,7 +83,7 @@ next.addEventListener('click', () => { // Логика кнопки "Вперё�
   if (!validateForm()) { // Проверка полей на валидность
     return
   }
-  if (currentTab <= 6) { // Смена табов
+  if (currentTab <= 11) { // Смена табов
     x[currentTab].style.display = "none";
     currentTab = ++currentTab;
     x[currentTab].style.display = "block";
