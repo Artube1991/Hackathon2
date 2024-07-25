@@ -4,6 +4,8 @@ showTab(currentTab);
 const next = document.querySelector('.next'),
       prev = document.querySelector('.prev');
 
+const main = document.getElementById('regForm');
+
 function getRandomInt(min, max) {
         min = Math.ceil(min);
         max = Math.floor(max);
@@ -40,14 +42,17 @@ getGIF("gif-cat", "cat")
 
 function submitForm(e) {
     e.preventDefault();
-    let user_input = e.target.confidence.value;
-    let user_input_2 = e.target.pict.value;
-    let user_input_3 = e.target.bothering.value;
-    let user_input_4 = e.target.avoid.value;
-    let user_input_5 = e.target.rate.value;
-    let user_input_6 = e.target.pleasure.value;
-    let user_input_7 = e.target.safe.value;
-    let user_input_8 = e.target.restless.value;
+    let user_input = Number(e.target.confidence.value);
+    let user_input_2 = Number(e.target.pict.value);
+    let user_input_3_nan = e.target.bothering.value;
+    let user_input_4 = Number(e.target.avoid.value);
+    let user_input_5 = Number(e.target.rate.value);
+    let user_input_6 = Number(e.target.pleasure.value);
+    let user_input_7 = Number(e.target.safe.value);
+    let user_input_8 = Number(e.target.restless.value);
+
+    let user_input_3_arr = user_input_3_nan.split(', ');
+    let user_input_3 = Number(user_input_3_arr.length);
 
     console.log(user_input);
     console.log(user_input_2);
@@ -58,8 +63,24 @@ function submitForm(e) {
     console.log(user_input_7);
     console.log(user_input_8);
 
-    anxiety_score = user_input + user_input_2 + user_input_3 + user_input_4 + user_input_6 + user_input_7 + user_input_8 - user_input_5;
+    let anxiety_score = user_input + user_input_2 + user_input_3 + user_input_4 + user_input_6 + user_input_7 + user_input_8 - user_input_5;
     console.log(anxiety_score);
+
+    if (anxiety_score < 3) {
+    main.innerHTML = '<div id="no_anxiety"><h1>Congratulations!</h1><div id="no_anxiety_gif"></div><p>You raised just .. scores. Your anxiety level is low as low as ever. You may relax and watch the funny video here:</p>';
+    getGIF("no_anxiety_gif", "happy");
+  }
+
+  if (anxiety_score > 21) {
+    main.innerHTML = '<div id="high_anxiety"><h1>Emergency!</h1><div id="high_anxiety_gif"></div><p>Your anxiety level is really high! ... scores! You should talk to psychologist and immediately have a rest! Here is some advives for you.</p></div>';
+    getGIF("high_anxiety_gif", "anxiety");
+  }
+
+  else {
+    
+  }
+      
+
 }
 
 function showTab(n) { // Отвечает за показ текущего таба и показ кнопки "Назад (prev)"
