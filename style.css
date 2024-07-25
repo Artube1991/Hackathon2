@@ -6,7 +6,8 @@
 
 body {
     font-family: sans-serif;
-    background-color: #F9F9F9;
+    background: url("./images/wallpaper.jpg") center center no-repeat  fixed;
+    background-size: cover;
 }
 
 /*================================================================================================================
@@ -19,6 +20,7 @@ body {
   padding: 40px;
   width: 70%;
   min-width: 300px;
+  align-self: center;
 }
 
 h1 {
@@ -41,6 +43,8 @@ input.invalid {
 /* Hide all steps by default: */
 .tab {
   display: none;
+  justify-content: center;
+
 }
 
 .tabAnimeOut {

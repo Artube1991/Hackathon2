@@ -76,13 +76,13 @@
         <div class="tab">
           <h2>Rate the GIF on a 10-point scale.</h2>
           <div id="gif-cat"></div>
-          <label for="rate">Your rate (between 1 and 10):</label>
-          <input type="number" id="rate" name="rate" min="1" max="10">
+          <label for="rate">Your rate (between 0 and 10):</label>
+          <input type="number" id="rate" name="rate" min="0" max="10">
         </div>
         <div class="tab">
           <h2>I get pleasure from things that pleased me before.</h2>
           <input type="radio" id="pleasure_1" name="pleasure" value="-1">
-          <label for="pleasure_1">1</label><br>
+          <label for="pleasure_1">1 (certainly)</label><br>
           <input type="radio" id="pleasure_2" name="pleasure" value="-2">
           <label for="pleasure_2">2</label><br>
           <input type="radio" id="pleasure_3" name="pleasure" value="-3">
@@ -90,7 +90,7 @@
           <input type="radio" id="pleasure_4" name="pleasure" value="-4">
           <label for="pleasure_4">4</label><br>
           <input type="radio" id="pleasure_5" name="pleasure" value="-5">
-          <label for="pleasure_5">5</label><br>
+          <label for="pleasure_5">5 (no way)</label><br>
           </div>
         <div class="tab">
               <h2>I fell safe for last 14 days.</h2>
@@ -102,7 +102,7 @@
       <div class="tab">
         <h2>I get restless when I think about my affairs and worries.</h2>
         <input type="radio" id="restless_0" name="restless" value="0">
-        <label for="restless_0">0 (nothing at all)</label><br>
+        <label for="restless_0">0 (definitely no)</label><br>
         <input type="radio" id="restless_1" name="restless" value="1">
         <label for="restless_1">1</label><br>
         <input type="radio" id="restless_2" name="restless" value="2">
@@ -122,7 +122,7 @@
         <input type="radio" id="restless_9" name="restless" value="9">
         <label for="restless_9">9</label><br>
         <input type="radio" id="restless_10" name="restless" value="10">
-        <label for="restless_10">10 (definetely)</label><br>
+        <label for="restless_10">10 (yes, of course)</label><br>
         <p><input type="submit" value="Submit" /></p>
       </div>
       <div style="overflow:auto;">
@@ -146,28 +146,26 @@
       </div>
     </form>
   </div>
-  <div class="regForm">
-      <div id="no_anxiety" class="finish">
+      <div id="no_anxiety" class="finish" class="regForm">
         <h1>Congratulations!</h1>
         <div id="no_anxiety_gif"></div>
         <p id="no_anxiety_text"></p>
         </div>
-      <div id="low_anxiety" class="finish">
+      <div id="low_anxiety" class="finish" class="regForm">
         <h1>Not bad!</h1>
         <div id="low_anxiety_gif"></div>
         <p id="low_anxiety_text"></p>
         </div>
-      <div id="anxiety" class="finish">
+      <div id="anxiety" class="finish" class="regForm">
         <h1>Oh-oh!</h1>
         <div id="anxiety_gif"></div>
         <p id="anxiety_text"></p>
         </div>
-      <div id="high_anxiety" class="finish">
+      <div id="high_anxiety" class="finish" class="regForm">
         <h1>Emergency!</h1>
         <div id="high_anxiety_gif"></div>
         <p id="high_anxiety_text"></p>
       </div>
-    </div>
     
     </body>
     </html>

@@ -8,9 +8,9 @@ const quetions = document.getElementById('questions');
 const finish = document.querySelectorAll('.finish');
 
 function finished() {
-  for (let i = 0; i < finish.length; i++) {
+  for (let i = 0; i < 4; i++) {
   finish[i].style.display = "none";
-}
+  }
 };
 
 finished();
@@ -134,7 +134,7 @@ next.addEventListener('click', () => { // Логика кнопки "Вперё�
   step(currentTab);
 });
 
-prev.addEventListener('click', () => { // Логика кнопки "Назад (prev)"
+prev.addEventListener('click', () => { 
   let x = document.querySelectorAll('.tab');
   x[currentTab].style.display = "none";
   currentTab = --currentTab;
@@ -143,7 +143,7 @@ prev.addEventListener('click', () => { // Логика кнопки "Назад 
   step(currentTab);
 });
 
-function step(n) { // Показывает на каком ты сейчас вопросе
+function step(n) { 
   var x = document.getElementsByClassName("step");
   for (let i = 0; i < x.length; i++) {
     x[i].classList.remove("current-step");
