@@ -8,7 +8,8 @@
     <title>Hackathon#2: Anxiety Test by Alex Ivanoff</title>
 </head>
 <body>
-    <form id="regForm" class="regForm" onsubmit="submitForm(event)">
+    <div id="questions">
+      <form id="regForm" class="regForm" onsubmit="submitForm(event)">
     <div class="tab">
     
       
@@ -130,26 +131,6 @@
           <button type="button" class="next">Next</button>
         </div>
       </div>
-      <!-- <div id="no_anxiety">
-        <h1>Congratulations!</h1>
-        <div id="no_anxiety_gif"></div>
-        <p>You raised just .. scores. Your anxiety level is low as low as ever. You may relax and watch the funny video here:</p>
-        </div> -->
-      <div id="low_anxiety">
-        <h1>Not bad!</h1>
-        <div id="low_anxiety_gif"></div>
-        <p>Your anxiety scores are ... Your anxiety level is low but you may have some stress deep inside your heart. Listen to it.</p>
-        </div>
-      <div id="anxiety">
-        <h1>Oh-oh!</h1>
-        <div id="anxiety_gif"></div>
-        <p>We've revealed that your anxiety scores are ... You definetely have the anxiety. Try to avoid stresses, eat and sleep well and talk to your friends.</p>
-        </div>
-      <!-- <div id="high_anxiety">
-        <h1>Emergency!</h1>
-        <div id="high_anxiety_gif"></div>
-        <p>Your anxiety level is really high! ... scores! You should talk to psychologist and immediately have a rest! Here's some advives for you.</p>
-      </div> -->
       <div style="text-align:center;margin-top:40px;">
         <span class="step current-step"></span>
         <span class="step"></span>
@@ -157,6 +138,28 @@
         <span class="step"></span>
       </div>
     </form>
+  </div>
+      <div id="no_anxiety" class="finish">
+        <h1>Congratulations!</h1>
+        <div id="no_anxiety_gif"></div>
+        <p>You raised just .. scores. Your anxiety level is low as low as ever. You may relax and watch the funny video here:</p>
+        </div>
+      <div id="low_anxiety" class="finish">
+        <h1>Not bad!</h1>
+        <div id="low_anxiety_gif"></div>
+        <p>Your anxiety scores are ... Your anxiety level is low but you may have some stress deep inside your heart. Listen to it.</p>
+        </div>
+      <div id="anxiety" class="finish">
+        <h1>Oh-oh!</h1>
+        <div id="anxiety_gif"></div>
+        <p>We've revealed that your anxiety scores are ... You definetely have the anxiety. Try to avoid stresses, eat and sleep well and talk to your friends.</p>
+        </div>
+      <div id="high_anxiety" class="finish">
+        <h1>Emergency!</h1>
+        <div id="high_anxiety_gif"></div>
+        <p>Your anxiety level is really high! ... scores! You should talk to psychologist and immediately have a rest! Here's some advives for you.</p>
+      </div>
+
     
     </body>
     </html>

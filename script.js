@@ -1,10 +1,19 @@
-let currentTab = 0 // Текущий таб
+let currentTab = 0;
 showTab(currentTab);
 
 const next = document.querySelector('.next'),
       prev = document.querySelector('.prev');
 
-const main = document.getElementById('regForm');
+const quetions = document.getElementById('questions');
+const finish = document.querySelectorAll('.finish');
+
+function finished() {
+  for (let i = 0; i < finish.length; i++) {
+  finish[i].style.display = "none";
+}
+};
+
+finished();
 
 function getRandomInt(min, max) {
         min = Math.ceil(min);
@@ -14,7 +23,7 @@ function getRandomInt(min, max) {
 
 function toHTML(element, text) {
       elem_to_insert = document.getElementById(element);
-      elem_to_insert.innerHTML = `<div><iframe src="https://giphy.com/embed/${text}" width="480" height="480" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>`
+      elem_to_insert.innerHTML = `<iframe src="https://giphy.com/embed/${text}" width="480" height="480" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>`
   }
 
 function getGIF(element, theme) {
@@ -38,7 +47,10 @@ function getGIF(element, theme) {
   });
 };
 
-getGIF("gif-cat", "cat")
+getGIF("gif-cat", "cat");
+getGIF("no_anxiety_gif", "happy");
+getGIF("high_anxiety_gif", "anxiety");
+getGIF("anxiety", "sad");
 
 function submitForm(e) {
     e.preventDefault();
@@ -67,19 +79,24 @@ function submitForm(e) {
     console.log(anxiety_score);
 
     if (anxiety_score < 3) {
-    main.innerHTML = '<div id="no_anxiety"><h1>Congratulations!</h1><div id="no_anxiety_gif"></div><p>You raised just .. scores. Your anxiety level is low as low as ever. You may relax and watch the funny video here:</p>';
-    getGIF("no_anxiety_gif", "happy");
-  }
+      quetions.style.display = "none";
+      document.getElementById('no_anxiety').style = "block";
+    }
 
-  if (anxiety_score > 21) {
-    main.innerHTML = '<div id="high_anxiety"><h1>Emergency!</h1><div id="high_anxiety_gif"></div><p>Your anxiety level is really high! ... scores! You should talk to psychologist and immediately have a rest! Here is some advives for you.</p></div>';
-    getGIF("high_anxiety_gif", "anxiety");
-  }
+    if (3 < anxiety_score < 11) {
+      quetions.style.display = "none";
+      document.getElementById('low_anxiety').style = "block";
+    }
 
-  else {
-    
-  }
-      
+    if (12 < anxiety_score < 22) {
+      quetions.style.display = "none";
+      document.getElementById('anxiety').style = "block";
+    }
+
+    else {
+      quetions.style.display = "none";
+      document.getElementById('high_anxiety').style = "block";
+    };    
 
 }
 
