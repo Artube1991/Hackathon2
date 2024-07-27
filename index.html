@@ -24,6 +24,7 @@
     </div>
     <div class="tab">
         <h2>"I feel confident". How much can this phrase be relevant for you?</h2>
+        <div class="inl">
         <input type="radio" id="confidence_0" name="confidence" value="0">
         <label for="confidence_0">0 (nothing at all)</label><br>
         <input type="radio" id="confidence_1" name="confidence" value="-1">
@@ -47,8 +48,10 @@
         <input type="radio" id="confidence_10" name="confidence" value="-10">
         <label for="confidence_10">10 (definitely)</label><br>
       </div>
+      </div>
       <div class="tab">
         <h2>Choose a picture below.</h2>
+        <div class="inl">
         <img src="./images/01.jpg"></img>
         <input type="radio" id="pict_1" name="pict" value="3">
         <label for="pict_1">1</label><br>
@@ -61,6 +64,7 @@
         <img src="./images/04.jpg"></img>
         <input type="radio" id="pict_4" name="pict" value="12">
         <label for="pict_4">4</label><br>
+        </div>
       </div>
       <div class="tab">
         <h2>What things have been bothering you for the last 14 days? List the items separated by commas and spaces.</h2>
@@ -81,6 +85,7 @@
         </div>
         <div class="tab">
           <h2>I get pleasure from things that pleased me before.</h2>
+          <div class="inl">
           <input type="radio" id="pleasure_1" name="pleasure" value="-1">
           <label for="pleasure_1">1 (no way)</label><br>
           <input type="radio" id="pleasure_2" name="pleasure" value="-2">
@@ -92,6 +97,7 @@
           <input type="radio" id="pleasure_5" name="pleasure" value="-5">
           <label for="pleasure_5">5 (certainly)</label><br>
           </div>
+          </div>
         <div class="tab">
               <h2>I fell safe for last 14 days.</h2>
               <input type="radio" id="safe_0" name="safe" value="5">
@@ -101,6 +107,7 @@
             </div>
       <div class="tab">
         <h2>I get restless when I think about my affairs and worries.</h2>
+        <div class="inl">
         <input type="radio" id="restless_0" name="restless" value="0">
         <label for="restless_0">0 (definitely no)</label><br>
         <input type="radio" id="restless_1" name="restless" value="1">
@@ -123,7 +130,8 @@
         <label for="restless_9">9</label><br>
         <input type="radio" id="restless_10" name="restless" value="10">
         <label for="restless_10">10 (yes, of course)</label><br>
-        <p><input type="submit" value="Submit" /></p>
+        </div>
+        <p><input type="submit" value="Submit" id="submit"/></p>
       </div>
       <div style="overflow:auto;">
         <div style="float:right;">
@@ -133,8 +141,6 @@
       </div>
       <div style="text-align:center;margin-top:40px;">
         <span class="step current-step"></span>
-        <span class="step"></span>
-        <span class="step"></span>
         <span class="step"></span>
         <span class="step"></span>
         <span class="step"></span>

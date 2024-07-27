@@ -23,7 +23,7 @@ function getRandomInt(min, max) {
 
 function toHTML(element, text) {
       elem_to_insert = document.getElementById(element);
-      elem_to_insert.innerHTML = `<iframe src="https://giphy.com/embed/${text}" width="480" height="480" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>`
+      elem_to_insert.innerHTML = `<center><iframe src="https://giphy.com/embed/${text}" width="480" height="480" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></center>`
   }
 
 function getGIF(element, theme) {
@@ -116,6 +116,7 @@ function showTab(n) {
   else if (n == x.length - 1) {
     next.style.display = "none";
   } else {
+    next.style.display = "inline";
     prev.style.display = "inline";
   }
 }

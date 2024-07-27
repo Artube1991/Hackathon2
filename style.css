@@ -16,20 +16,23 @@ body {
 .regForm {
   background-color: #ffffff;
   margin: 100px auto;
-  font-family: Raleway;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   padding: 40px;
   width: 70%;
   min-width: 300px;
   align-self: center;
+  opacity: 0.85;
 }
 
-.finish  {background-color: #ffffff;
+.finish {background-color: #ffffff;
 margin: 100px auto;
-font-family: Raleway;
+font-family: Georgia, 'Times New Roman', Times, serif;
+font-size: 18px;
 padding: 40px;
 width: 70%;
 min-width: 300px;
 align-self: center;
+opacity: 0.85;
 }
 
 h1 {
@@ -40,8 +43,13 @@ input {
   padding: 10px;
   width: 100%;
   font-size: 17px;
-  font-family: Raleway;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   border: 1px solid #aaaaaa;
+}
+
+.inl {
+  display: flex;
+  flex-direction: row;
 }
 
 /* Mark input boxes that gets an error on validation: */
@@ -53,6 +61,7 @@ input.invalid {
 .tab {
   display: none;
   justify-content: center;
+  align-content: center;
 
 }
 
@@ -72,13 +81,29 @@ button {
   border: none;
   padding: 10px 20px;
   font-size: 17px;
-  font-family: Raleway;
   cursor: pointer;
 }
 
 button:hover {
   opacity: 0.85;
 }
+
+#submit {
+  display: flex;
+  flex-direction: row;
+  background-color: #4CAF50;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  width: 40%;
+  justify-self: end;
+}
+
+#submit:hover {
+  opacity: 0.85;
+}
+
+
 
 #prevBtn {
   background-color: #bbbbbb;
