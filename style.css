@@ -89,14 +89,11 @@ button:hover {
 }
 
 #submit {
-  display: flex;
-  flex-direction: row;
-  background-color: #4CAF50;
+  background-color: red;
+  padding: 10px 20px;
   color: #ffffff;
   border: none;
   cursor: pointer;
-  width: 40%;
-  justify-self: end;
 }
 
 #submit:hover {
